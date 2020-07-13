@@ -7,14 +7,14 @@ vermelho= (255,0,0)
 verde= (0,255,0)
 azul= (0,0,255)
 
-##def seticon(iconname): #Função para definir o icone do display
-##    icon= pygame.Surface((32,32))
-##    icon.set_colorkey((0,0,0))
-##    rawicon= pygame.image.load(iconname)
-##    for i in range(0,32):
-##        for j in range (0,32):
-##            icon.set_at((i,j), rawicon.get_at((i,j)))
-##    pygame.display.set_icon(icon)
+def seticon(iconname): #Função para definir o icone do display
+    icon= pygame.Surface((32,32))
+    icon.set_colorkey((0,0,0))
+    rawicon= pygame.image.load(iconname)
+    for i in range(0,32):
+        for j in range (0,32):
+            icon.set_at((i,j), rawicon.get_at((i,j)))
+    pygame.display.set_icon(icon)
 
 
 try:
@@ -31,7 +31,7 @@ placar= 40
 relogio= pygame.time.Clock()
 fundo= pygame.display.set_mode((largura,altura))
 pygame.display.set_caption('Game Snake')
-##seticon('icon.png')
+seticon('icon.png')
 
 
 def texto(msg, cor, tam, x, y):
